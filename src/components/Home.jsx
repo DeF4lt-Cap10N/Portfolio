@@ -1,8 +1,50 @@
 import React from "react";
 import TechCarousel from "./Technology";
-import GitHubCalendar from "react-github-calendar";
-
 import GitHubStats from "./GithubStats";
+import ProjectCard from "./PorjectsCard"
+import Footer from "./Footer";
+
+const projects = [
+    {
+      title: "Streamify",
+      description:
+        "Streamify is a modern streaming platform showcasing trending content with seamless user experience and real-time playback..",
+      technologies: [
+        "React.js",
+        "JavaScript",
+        "Tailwind CSS",
+        "Express.js",
+        "Node.js",
+        "Recoil",
+      ],
+      githubUrl: "https://github.com/DeF4lt-Cap10N/tube-app",
+      liveUrl: "https://tube-app-iota.vercel.app/",
+    },
+    {
+      title: "EdTech Platform",
+      description:
+        "Designed a high-performance course management application, streamlining course creation, enrollment, and tracking for users.",
+      technologies: [
+        "React.js",
+        "JavaScript",
+        "Chart.js",
+        "Moongose",
+        "MOngoDb",
+      ],
+      githubUrl: "https://github.com/DeF4lt-Cap10N/course-app",
+      liveUrl: "https://lernify-app.onrender.com/",
+    },
+    {
+      title: "KeyCrypt",
+      description:
+        "Developed a secure and scalable password manager application enabling users to store and manage encrypted credentials 100%",
+      technologies: ["React", "Redux", "Node.js", "MongoDB"],
+      githubUrl: "https://github.com/DeF4lt-Cap10N/KeyCrypt",
+      liveUrl: "https://key-crypt.vercel.app/",
+    },
+  ];
+
+
 
 const Home = () => {
   return (
@@ -91,8 +133,24 @@ const Home = () => {
           </div>
         </div>
 
+        <div className="mt-16 pl-5 pr-5 ">
+            <div className="text-4xl mb-5">Projects</div>
+             <div className="grid grid-cols-1 md:grid-cols-2  gap-8">
+          {projects.map((project, index) => (
+            <ProjectCard
+              key={index}
+              title={project.title}
+              description={project.description}
+              technologies={project.technologies}
+              githubUrl={project.githubUrl}
+              liveUrl={project.liveUrl}
+            />
+          ))}
+        </div>
+        </div>
+
         <div className="mt-16">
-            <div className="text-4xl ">Projects</div>
+          <Footer/>
         </div>
       </div>
     </>
