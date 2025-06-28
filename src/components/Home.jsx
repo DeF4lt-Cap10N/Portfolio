@@ -1,62 +1,65 @@
 import React from "react";
 import TechCarousel from "./Technology";
 import GitHubStats from "./GithubStats";
-import ProjectCard from "./PorjectsCard"
+import ProjectCard from "./PorjectsCard";
 import Footer from "./Footer";
+import Tool from "./Tool";
+import WorkExp from "./WorkExp";
 
 const projects = [
-    {
-      title: "Streamify",
-      description:
-        "Streamify is a modern streaming platform showcasing trending content with seamless user experience and real-time playback..",
-      technologies: [
-        "React.js",
-        "JavaScript",
-        "Tailwind CSS",
-        "Express.js",
-        "Node.js",
-        "Recoil",
-      ],
-      githubUrl: "https://github.com/DeF4lt-Cap10N/tube-app",
-      liveUrl: "https://tube-app-iota.vercel.app/",
-    },
-    {
-      title: "EdTech Platform",
-      description:
-        "Designed a high-performance course management application, streamlining course creation, enrollment, and tracking for users.",
-      technologies: [
-        "React.js",
-        "JavaScript",
-        "Chart.js",
-        "Moongose",
-        "MOngoDb",
-      ],
-      githubUrl: "https://github.com/DeF4lt-Cap10N/course-app",
-      liveUrl: "https://lernify-app.onrender.com/",
-    },
-    {
-      title: "KeyCrypt",
-      description:
-        "Developed a secure and scalable password manager application enabling users to store and manage encrypted credentials 100%",
-      technologies: ["React", "Redux", "Node.js", "MongoDB"],
-      githubUrl: "https://github.com/DeF4lt-Cap10N/KeyCrypt",
-      liveUrl: "https://key-crypt.vercel.app/",
-    },
-  ];
-
-
+  {
+    title: "Streamify",
+    description:
+      "Streamify is a modern streaming platform showcasing trending content with seamless user experience and real-time playback..",
+    technologies: [
+      "React.js",
+      "JavaScript",
+      "Tailwind CSS",
+      "Express.js",
+      "Node.js",
+      "Recoil",
+    ],
+    githubUrl: "https://github.com/DeF4lt-Cap10N/tube-app",
+    liveUrl: "https://tube-app-iota.vercel.app/",
+  },
+  {
+    title: "EdTech Platform",
+    description:
+      "Designed a high-performance course management application, streamlining course creation, enrollment, and tracking for users.",
+    technologies: ["React.js", "JavaScript", "Chart.js", "Moongose", "MOngoDb"],
+    githubUrl: "https://github.com/DeF4lt-Cap10N/course-app",
+    liveUrl: "https://lernify-app.onrender.com/",
+  },
+  {
+    title: "KeyCrypt",
+    description:
+      "Developed a secure and scalable password manager application enabling users to store and manage encrypted credentials 100%",
+    technologies: ["React", "Redux", "Node.js", "MongoDB"],
+    githubUrl: "https://github.com/DeF4lt-Cap10N/KeyCrypt",
+    liveUrl: "https://key-crypt.vercel.app/",
+  },
+];
 
 const Home = () => {
   return (
     <>
       <div className="w-full px-4 py-10 max-w-[900px] mx-auto text-white font-serif font-bold">
-        <div className="flex justify-between text-2xl mb-10">
-          <div className="hover:text-blue-400">Home</div>
-          <div className="flex gap-10">
+
+         {/* Navbar */}
+        <div className="flex justify-between text-2xl mb-16">
+          <div className="hover:text-blue-400  flex  items-center gap-3 group hover:scale-105 transition-transform duration-300">
+            <img
+              src="https://pikaso.cdnpk.net/public/production/prompt-templates/426.jpeg"
+              alt="FoodExplorer Logo"
+              className="w-12 h-12 sm:w-14 sm:h-14 rounded-full shadow-lg ring-2 ring-cyan-400 group-hover:ring-purple-500"
+            />
+          </div>
+          <div className="flex items-center gap-10">
             <div className="hover:text-blue-400">About</div>
             <div className="hover:text-blue-400">Projects</div>
           </div>
         </div>
+
         <div className="flex  flex-col gap-2 mb-12">
           <p className="text-sky-400 text-2xl">Hi I am,</p>
           <h1 className="text-5xl md:text-7xl font-bold mb-2">Rahul Kumar.</h1>
@@ -98,60 +101,43 @@ const Home = () => {
           </span>
         </button>
 
+        {/* technologia */}
         <div>
           <TechCarousel />
         </div>
 
+        {/* github */}
         <div className="mb-16">
           <GitHubStats username="DeF4lt-Cap10N" />
         </div>
 
-        <div className="">
-          <div className="">
-            <h1 className="text-3xl md:text-4xl font-bold mb-1">
-              Work Experience
-            </h1>
-            <p className="md:text-xl text-gray-400">Places I have worked at</p>
-          </div>
-          <div className="h-28 mt-8 border-l-2 border-gray-400 flex flex-col justify-center">
-            <h2 className="ml-5 text-xl md:text-2xl">Hackathons</h2>
-            <p className="ml-5 text-lg md:text-xl text-gray-400">
-              Full Stack Developer
-            </p>
-            <p className="ml-5 text-lg md:text-xl text-gray-700 font-semibold">
-              Aug 2024 - Present
-            </p>
-          </div>
-          <div className="h-28 mt-5 border-l-2 border-gray-400 flex flex-col justify-center">
-            <h2 className="ml-5 text-xl md:text-2xl">Freelance</h2>
-            <p className="ml-5 text-lg md:text-xl text-gray-400">
-              Full Stack Developer
-            </p>
-            <p className="ml-5 text-lg md:text-xl text-gray-700 font-semibold">
-              Oct 2023 - Present
-            </p>
-          </div>
-        </div>
+        {/* exp */}
+        <WorkExp />
 
+        {/* project */}
         <div className="mt-16 pl-5 pr-5 ">
-            <div className="text-4xl mb-5">Projects</div>
-             <div className="grid grid-cols-1 md:grid-cols-2  gap-8">
-          {projects.map((project, index) => (
-            <ProjectCard
-              key={index}
-              title={project.title}
-              description={project.description}
-              technologies={project.technologies}
-              githubUrl={project.githubUrl}
-              liveUrl={project.liveUrl}
-            />
-          ))}
-        </div>
+          <div className="text-4xl mb-5">Projects</div>
+          <div className="grid grid-cols-1 md:grid-cols-2  gap-8">
+            {projects.map((project, index) => (
+              <ProjectCard
+                key={index}
+                title={project.title}
+                description={project.description}
+                technologies={project.technologies}
+                githubUrl={project.githubUrl}
+                liveUrl={project.liveUrl}
+              />
+            ))}
+          </div>
         </div>
 
         <div className="mt-16">
-          <Footer/>
+          <Footer />
         </div>
+      </div>
+
+      <div className="relative pt-5">
+        <Tool />
       </div>
     </>
   );

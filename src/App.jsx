@@ -1,15 +1,15 @@
 import React from "react";
 import Home from "./components/Home";
+import Bg from "./components/Bg";
+import Scroller from "./components/Scroller";
 
 const App = () => {
   return (
     <>
+      <Bg />
       <div className="">
-        <div className="">
-          <div className="">
-            <Home />
-          </div>
-        </div>
+        <Scroller/>
+        <Home />
       </div>
     </>
   );
