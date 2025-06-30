@@ -1,10 +1,13 @@
 import React from "react";
 import TechCarousel from "./Technology";
 import GitHubStats from "./GithubStats";
-import ProjectCard from "./PorjectsCard";
+import ProjectCard from "./ProjectCard";
 import Footer from "./Footer";
 import Tool from "./Tool";
 import WorkExp from "./WorkExp";
+import NavBar from "./NavBar";
+
+import { Link } from "react-router-dom";
 
 const projects = [
   {
@@ -44,22 +47,10 @@ const Home = () => {
   return (
     <>
       <div className="w-full px-4 py-10 max-w-[900px] mx-auto text-white font-serif font-bold">
+        {/* Navbar */}
+        <NavBar />
 
-         {/* Navbar */}
-        <div className="flex justify-between text-2xl mb-16">
-          <div className="hover:text-blue-400  flex  items-center gap-3 group hover:scale-105 transition-transform duration-300">
-            <img
-              src="https://pikaso.cdnpk.net/public/production/prompt-templates/426.jpeg"
-              alt="FoodExplorer Logo"
-              className="w-12 h-12 sm:w-14 sm:h-14 rounded-full shadow-lg ring-2 ring-cyan-400 group-hover:ring-purple-500"
-            />
-          </div>
-          <div className="flex items-center gap-10">
-            <div className="hover:text-blue-400">About</div>
-            <div className="hover:text-blue-400">Projects</div>
-          </div>
-        </div>
-
+        {/* INtrooo */}
         <div className="flex  flex-col gap-2 mb-12">
           <p className="text-sky-400 text-2xl">Hi I am,</p>
           <h1 className="text-5xl md:text-7xl font-bold mb-2">Rahul Kumar.</h1>
@@ -75,6 +66,7 @@ const Home = () => {
           </p>
         </div>
 
+       {/* resume button */}
         <button
           onClick={() =>
             window.open(
@@ -135,7 +127,8 @@ const Home = () => {
           <Footer />
         </div>
       </div>
-
+    
+     {/* tool */}
       <div className="relative pt-5">
         <Tool />
       </div>
