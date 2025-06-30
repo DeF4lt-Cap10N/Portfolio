@@ -5,7 +5,7 @@ import Bg from "../components/Bg";
 import Footer from "../components/Footer";
 import Tool from "../components/Tool";
 import NavBar from "../components/NavBar";
-import { Scroll } from "lucide-react";
+import Scroller from "../components/Scroller";
 
 const projects = [
   {
@@ -44,13 +44,15 @@ const projects = [
 const Projects = () => {
   return (
     <>
+      <Scroller />
       <div className="relative min-h-screen w-full overflow-x-hidden scroll-smooth">
         <Bg />
-        <div className="relative z-10 max-w-[1000px] mx-auto px-4 md:px-8 py-16">
+        <div className="relative z-10 max-w-[1000px] mx-auto px-4 md:px-8 py-10">
           <NavBar />
-          <h1 className="text-4xl font-bold text-center mb-10 text-gray-800 dark:text-white">
+          <h1 className="bg-gradient-to-bl from-violet-400 to-cyan-400 bg-clip-text text-transparent text-4xl font-bold text-center mb-10">
             My Projects
           </h1>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             {projects.map((project, index) => (
               <ProjectCard key={index} {...project} />

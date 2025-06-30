@@ -12,22 +12,22 @@ const toolItem = [
   {
     name: "Twitter",
     icon: <FaEnvelope size={20} />,
-    link: "https://twitter.com",
+    link: "mailto:captainakash1675@gmail.com",
   },
   {
     name: "Twitter",
     icon: <FaTwitter size={20} />,
-    link: "https://twitter.com",
+    link: "https://x.com/RahulKumar1675",
   },
   {
     name: "GitHub",
     icon: <FaGithub size={20} />,
-    link: "https://github.com",
+    link: "https://github.com/DeF4lt-Cap10N",
   },
   {
     name: "LinkedIn",
     icon: <FaLinkedin size={20} />,
-    link: "https://linkedin.com",
+    link: "https://www.linkedin.com/in/captxrahul/",
   },
 ];
 
@@ -35,13 +35,14 @@ export default function Tool() {
   return (
     <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50">
       <div className="flex justify-around gap-3 items-center px-3 py-1 bg-black/60 backdrop-blur-md shadow-2xl rounded-[20px] ring-1 ring-cyan-200">
-      
         <Link to="/">
-          <div className="text-white">{<FaHome size={20} />}</div>
+          <div className="text-white">{<FaHome size={25} />}</div>
           <div className="absolute pointer-events-none bottom-full left-1/2 -translate-x-1/2 mb-3 w-max px-2 py-1 text-white bg-black text-sm rounded-md opacity-0 scale-50 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100">
             {"Home"}
           </div>
         </Link>
+
+        <span className="h-8 border-x-2 border-gray-600 "></span>
 
         {toolItem.map(({ name, icon, link }, index) => (
           <a
