@@ -11,11 +11,6 @@ import { Link } from "react-router-dom";
 const toolItem = [
   {
     name: "Twitter",
-    icon: <FaEnvelope size={20} />,
-    link: "mailto:captainakash1675@gmail.com",
-  },
-  {
-    name: "Twitter",
     icon: <FaTwitter size={20} />,
     link: "https://x.com/RahulKumar1675",
   },
@@ -28,6 +23,11 @@ const toolItem = [
     name: "LinkedIn",
     icon: <FaLinkedin size={20} />,
     link: "https://www.linkedin.com/in/captxrahul/",
+  },
+   {
+    name: "Mail",
+    icon: <FaEnvelope size={20} />,
+    link: "mailto:captainakash1675@gmail.com",
   },
 ];
 
