@@ -7,7 +7,8 @@ import Tool from "./Tool";
 import WorkExp from "./WorkExp";
 import NavBar from "./NavBar";
 
-import { Link } from "react-router-dom";
+import LeetcodeStats from "./LeetcodeStats";
+
 
 const projects = [
   {
@@ -82,7 +83,7 @@ const Home = () => {
             <svg
               stroke="currentColor"
               fill="currentColor"
-              stroke-width="0"
+              strokeWidth="0"
               viewBox="0 0 448 512"
               height="1em"
               width="1em"
@@ -101,6 +102,10 @@ const Home = () => {
         {/* github */}
         <div className="mb-16">
           <GitHubStats username="DeF4lt-Cap10N" />
+        </div>
+
+        <div className="mb-16">
+          <LeetcodeStats/>
         </div>
 
         {/* exp */}
