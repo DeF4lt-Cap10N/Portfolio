@@ -6,7 +6,7 @@ const LeetcodeStats = () => {
   const [stats, setStats] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:4000/api/leetcode")
+    fetch('https://portfolio-2-rku2.onrender.com/api/leetcode')
       .then((res) => res.json())
       .then(setStats)
       .catch(console.error);
