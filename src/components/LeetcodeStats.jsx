@@ -6,7 +6,8 @@ const LeetcodeStats = () => {
   const [stats, setStats] = useState(null);
 
   useEffect(() => {
-    fetch('https://portfolio-2-rku2.onrender.com/api/leetcode')
+    fetch('https://portfolio-jsba.vercel.app/api/leetcode')
+    fetch('https://portfolio-jsba.vercel.app/api/leetcode')
       .then((res) => res.json())
       .then(setStats)
       .catch(console.error);
